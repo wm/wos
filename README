@@ -7,7 +7,8 @@ It is a pretty simple app for beginners in RoR to have a look at how things are 
 
 == Getting Started
 
-1. The app should run on RoR 2.1 or greater.
+The app should run on RoR 2.1 or greater.
+1. You need to copy the database.yml.template file into database.yml and configure with your settings
 2. You will need to 
 
   run rake:db:create
