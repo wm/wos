@@ -1,0 +1,36 @@
+<h2>Ah!, you caught a stray, please add their details here and our shepards will look after them</h2>
+
+<% form_for(@entry) do |f| %>
+  <div>
+    <%= f.error_messages %>
+  </div>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.label :protocol %><br />
+    <%= f.text_field :protocol %>
+  </p>
+  <p>
+    <%= f.label :mac %><br />
+    <%= f.text_field :mac %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </p>
+  <p>
+    <%= f.submit 'Add This Sheep' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', entries_path %>

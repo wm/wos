@@ -1,0 +1,22 @@
+== Wall of Sheep
+
+This is the Wall of Sheep application to display hacked users/password combinations.
+This app was create for COMP 120 Web Egineering @ Tufts Unversitey as an assignment
+
+It is a pretty simple app for beginners in RoR to have a look at how things are done.
+
+== Getting Started
+
+1. The app should run on RoR 2.1 or greater.
+2. You will need to 
+
+  run rake:db:create
+  run rake:db:migrate
+  run rake:db:TODO
+
+4. Then run ruby ./script/server
+3. Go to http://localhost:3000/ and you will see the Wall of Sheep and be able to enter new sheep
+4. To verify sheep you will need the usename: shepard and password: wiseman
+
+== License
+Licensed under MIT Licensed

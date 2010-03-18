@@ -1,0 +1,30 @@
+<table cellpadding="2" cellspacing="0" class="tablesorter" id="sheep">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Domain</th>
+      <th>Protocol</th>
+      <th>Mac</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @entries.each do |entry| %>
+    <tr id='verified_<%= entry.id %>'>
+      <td><%=h entry.username %></td>
+      <td><%=h entry.password %></td>
+      <td><%=h entry.domain %></td>
+      <td><%=h entry.protocol %></td>
+      <td><%=h entry.mac %></td>
+      <td class="note"><%=h entry.note %></td>
+    </tr>
+<% end %>
+ </tbody>
+</table>
+
+<br />
+
+<%= link_to 'Add another sheep', new_entry_path %>
+&nbsp;
+<%= link_to 'View all unverified', unverified_path %>

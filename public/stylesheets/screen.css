@@ -1,0 +1,147 @@
+/* 
+ *	COLORS
+ *	731a1a	Dark red	d9b60b
+ *	d92929	Light red	fad40d
+ *	505a62	Blue-grey	56575A
+ *	273352	Dark blue	3F4043
+ *	201711	Umber		1d1e22
+ *	
+ */
+
+body {
+	background: #1d1e22 url(../images/bg_grad.png) no-repeat bottom fixed;
+	color: #56575A;
+}
+.node {
+	background: #3F4043;
+	border: 2px solid #56575A;
+	color: #cccccc;
+	padding: 10px;
+}
+.header {
+	text-align: center;
+}
+a, a:link, a:visited { color: #fad40d; }
+a:hover, a:active { color: #d9b60b; }
+.nav {
+	background: #3F4043; /* 505a62 */
+	border: 2px solid #494A4D;
+}
+.nav li a {
+	color: #ffffff;
+}
+.nav li a:hover, .nav li a:active {
+	background: #56575A;
+}
+body.about #nav-about a,
+body.news #nav-news a,
+body.stats #nav-stats a,
+body.tools #nav-tools a,
+body.press #nav-press a,
+body.contact #nav-contact a,
+body.legal #nav-legal a
+{
+	background: #56575A;
+}
+h2 {
+	color: #ffffff;
+	border-bottom: 2px solid #56575A;
+}
+h3 {
+	color: #ffffff; /* 505a62; */
+}
+.sidebar .node h4 {
+	color: #ffffff /* 505a62; */
+}
+.footer, .footer a {
+	color: #56575A;
+}
+
+
+
+/* STRUCTURE */
+
+h2, h3, h4, .nav li a {
+	font-size: 120%;
+}
+
+h1 a {
+	text-decoration: none;
+	color: #ffffff !important;
+}
+
+blockquote {
+	color: #aaaaaa;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	float: left;
+	list-style-type: none;
+}
+.nav li a {
+	display: block;
+	width: 135px;
+	padding: 8px 0;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.nav li.last a {
+	width: 140px;
+}
+
+body#whatwedo #subnav-whatwedo,
+body#history #subnav-history,
+body#crew #subnav-crew
+{
+	font-weight: bold;
+}
+
+.main {
+	margin-top: 12px;
+}
+.main .node {
+	padding-top: 8px;
+	min-height: 526px;
+}
+
+.sidebar .node {
+	margin-top: 12px;
+	padding-bottom: 18px;
+}
+.sidebar .node h4, .sidebar .node li {
+	
+}
+.sidebar .node h4 {
+	border-bottom: 2px solid #505a62;
+}
+.sidebar .node ol, .sidebar .node ul {
+	list-style-type: none;
+	padding:0;
+	margin: 0 ;
+}
+.sidebar .node li {
+/* 	background: url(../img/arrow-right.gif) no-repeat 0 3px; */
+}
+
+.footer p {
+	text-align: left;
+	margin: 9px auto;
+}
+
+/* ************************************* */
+
+body dl dt {
+	margin-top: 18px;
+}
+body dl dd {
+	margin-left: 0;
+}
+
+dd.byline {
+	font-style: italic;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Entries: <%= controller.action_name %></title>
+    <link rel="stylesheet" href="http://www.wallofsheep.com/media/css/lib/blueprint/screen.css" type="text/css" media="screen, projection" /> 
+    <link rel="stylesheet" href="http://www.wallofsheep.com/media/css/lib/blueprint/print.css" type="text/css" media="print" /> 
+    <!--[if IE]><link rel="stylesheet" href="http://www.wallofsheep.com/media/css/lib/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]--> 
+    <!-- end: Blueprint CSS --> 
+    <link rel="stylesheet" href="http://www.wallofsheep.com/media/css/screen.css" type="text/css" media="screen, projection" /> 
+    <link rel="stylesheet" href="http://www.wallofsheep.com/media/css/print.css" type="text/css" media="print" /> 
+    <!--[if lt IE 7.]>
+    <script defer type="text/javascript" src="http://www.wallofsheep.com/media/js/lib/pngfix.js"></script>
+    <![endif]--> 
+    <%= stylesheet_link_tag 'style' %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery.tablesorter.min.js' %>
+    <%= javascript_include_tag 'jquery.uitablefilter.js' %>
+
+  </head>
+  <body>
+
+    <p style="color: green"><%= flash[:notice] %></p>
+
+    <div class="container" id="container">
+      <div class="header"> 
+        <a href="/"><img src="http://www.wallofsheep.com/media/img/logo_sheep.gif" alt="Sheep" /></a> 
+        <h1><a href="/">Wall of Sheep</a></h1> 
+      </div> 
+      <div class="main"> 
+        <%= yield %>
+      </div>
+    </div>  
+  </body>
+</html>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  password: MyString
+  domain: MyString
+  protocol: MyString
+  mac: MyString
+  note: MyText
+  verified: false
+
+two:
+  username: MyString
+  password: MyString
+  domain: MyString
+  protocol: MyString
+  mac: MyString
+  note: MyText
+  verified: false

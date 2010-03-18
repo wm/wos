@@ -1,0 +1,75 @@
+<h2>Unverified Sheep</h2>
+<table cellpadding="2" cellspacing="0" class="tablesorter" id="unverified">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Domain</th>
+      <th>Protocol</th>
+      <th>Mac</th>
+      <th>Note</th>
+      <th>Verified</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @unverified_entries.each do |entry| %>
+    <tr id="unverified-<%=h entry.id %>">
+      <td><%=h entry.username %></td>
+      <td><%=h entry.clear_password %></td>
+      <td><%=h entry.domain %></td>
+      <td><%=h entry.protocol %></td>
+      <td><%=h entry.mac %></td>
+      <td><%=h entry.note %></td>
+      <td><%=h entry.verified %></td>
+      <td><%= button_to 'Verify', { 
+          :controller => :entries, 
+          :action => :update,
+          "entry[verified]" => true,
+          :id => entry.id
+          }, :confirm => 'Confirm Verification?', :method => :put, :class => "verify-button"  %></td>
+      <td><%= button_to 'Destroy', entry, :confirm => 'Delete? Are you sure?', :method => :delete %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+<br />
+
+<h2>Verified Sheep</h2>
+<table cellpadding="2" cellspacing="0" class="tablesorter" id="verified">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Domain</th>
+      <th>Protocol</th>
+      <th>Mac</th>
+      <th>Note</th>
+      <th>Verified</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @verified_entries.each do |entry| %>
+    <tr id="verified_<%=h entry.id %>">
+      <td><%=h entry.username %></td>
+      <td><%=h entry.clear_password %></td>
+      <td><%=h entry.domain %></td>
+      <td><%=h entry.protocol %></td>
+      <td><%=h entry.mac %></td>
+      <td><%=h entry.note %></td>
+      <td><%=h entry.verified %></td>
+      <td><%= button_to 'Unverify', { 
+          :controller => :entries, 
+          :action => :update,
+          "entry[verified]" => "false",
+          :id => entry.id
+          }, :confirm => 'Confirm Unverification?', :method => :put, :class => "verify-button"  %></td>
+      <td><%= button_to 'Destroy', entry, :confirm => 'Delete? Are you sure?', :method => :delete %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+<br />
+
+<%= link_to 'Wall of Sheep', entries_path %>
+&nbsp;
+<%= link_to 'Logout', logout_path %>
