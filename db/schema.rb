@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100307224932) do
+ActiveRecord::Schema.define(:version => 20100307212727) do
 
   create_table "kafc_banner", :primary_key => "bid", :force => true do |t|
     t.integer  "cid",                             :default => 0,        :null => false
